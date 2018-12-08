@@ -51,17 +51,20 @@ Followings are the result of each step with `solidWhiteCurve.jpg`.
 - final result
 <img src="./test_images_output/solidWhiteCurve.jpg" title="final" width=480>
 
-
 ### 2. Identify potential shortcomings with your current pipeline
-
-
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
-
+- One potential shortcoming would be the parameter for current pipeline is optimized only the `test_images`. 
+  - For example, the parameter of the ROI dependes on the road on `test_images`.  If the image is diffrent road, the optimal parameter could be changed. That means if I apply this pipline to another scene, it cannot be detect lanes. 
+  - Another example is different size of images. In the Optional Challenge, the size of image is different. I optimized the height with image size of `test_images`. So, the pipeline clearly cannot be applied to different size of images. 
+  - Not only the roi, but also parameter of hough transform may cause the problem with different set of input images. For example, the left side lane may not be able to find in the different scene. 
+- Another shotrcoming could be the shape of the lane. Hough transform can only deal with straight line. But, the road also has curve line. However, straight line cannot be fit with curve line. So the lane cannot be correctly detected if it is curved. 
 
 ### 3. Suggest possible improvements to your pipeline
 
 A possible improvement would be to ...
 
-Another potential improvement could be to ...
+- For the parameter, I have following ideas. 
+  - We shuold test with much more scenes to define parameters. 
+  - The parameter should be changed for the different size of images. In the program, the parameter should be changed by checking the input size of images. 
+  - The parameter for hough transform should also be tested with many other images to generalize its parameters. 
+- To deal with curve, fitting with polynomial function or clothoid can be the possible way to represent a curve. 
+
