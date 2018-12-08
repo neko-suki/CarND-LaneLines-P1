@@ -11,11 +11,6 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
-[image_gray]: ./test_images_output/gray/solidWhiteCurve.jpg "image_gray"
-[image_canny]: ./test_images_output/canny/solidWhiteCurve.jpg "image_canny"
-[image_roi]: ./test_images_output/roi/solidWhiteCurve.jpg "image_roi"
-[image_hough]: ./test_images_output/hough/solidWhiteCurve.jpg "image_hough"
-[image_final]: ./test_images_output/solidWhiteCurve.jpg "image_final"
 
 ---
 
@@ -39,12 +34,20 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 Followings are the result of each step with `solidWhiteCurve.jpg`. 
 - Gray Scaling
 <img src="./test_images_output/gray/solidWhiteCurve.jpg" title="gray" width=480>
+
+
 - Canny's Algorithm
 <img src="./test_images_output/canny/solidWhiteCurve.jpg" title="canny" width=480>
+
+
 - ROI
 <img src="./test_images_output/roi/solidWhiteCurve.jpg" title="roi" width=480>
+
+
 - Hough transform with straight line
 <img src="./test_images_output/hough/solidWhiteCurve.jpg" title="hough" width=480>
+
+
 - final result
 <img src="./test_images_output/solidWhiteCurve.jpg" title="final" width=480>
 
